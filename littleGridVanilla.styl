@@ -1,0 +1,177 @@
+black2 = #F9F9F9
+black5 = #F2F2F2
+black10 = #E5E5E5
+black15 = #d9d8d8
+black20 = #CFCFCF
+black25 = #bfbebe
+black40 = #6D6E70
+black65 = #58585b
+black75 = #404041
+black90 = #3B3A3C
+
+black = #000000
+white = #FFFFFF
+
+
+h6
+  position relative
+  font-size 16px
+  img
+    margin-top 7px
+    float right
+    cursor pointer
+  div
+    border-top 1px solid white
+    padding 10px 0
+    font-size 14px
+    display none
+
+.gridData
+  overflow-x: auto;
+  border 1px solid black15
+  h6
+    margin 0 0 15px 0
+    color white
+    font-weight normal
+  .row
+    padding-bottom 0 !important
+    padding-top 1% !important
+    .column
+      font-size 12px !important
+
+.gridData2
+  overflow-x: auto;
+  margin-left 30px
+  h6
+    margin 0 0 15px 0
+    color white
+    font-weight normal
+  .row
+    padding-bottom 0 !important
+    padding-top 1% !important
+    .column
+      font-size 12px !important
+
+.littleGrid
+  padding-left 1rem !important
+  padding-right 1rem !important
+
+.tableData
+  .row
+    .table
+      border none
+    .container
+        margin 0
+        border-radius 0
+        border 0
+        border-bottom none
+        thead
+          font-size 12px
+          color black40
+          line-height 15px
+        tbody
+          font-size 12px
+          color black75
+          tr
+            &:nth-child(odd)
+              /*background-color black5*/
+            td
+              border-top none
+              vertical-align top !important
+              /*border-bottom black10 1px solid*/
+              border-top black10 1px solid
+          a
+            color black75
+            font-weight 700
+            text-decoration underline
+            &:hover
+              text-decoration underline
+          .moreDetail
+            display none
+            td
+              padding-left 50px
+              padding-top 15px
+              border-top none
+              .ui.grid
+                line-height 25px
+                font-size 12px !important
+                color black40
+                text-transform capitalize
+                &:nth-child(even)
+                  color black75
+                  text-transform uppercase
+                .column
+                  padding 0
+                  width 24.5% // this width fixes the layout so all four columns fit in the same row
+                  padding-left 10px !important
+                  &:nth-child(odd)
+                    background-color black5
+                label
+                  font-size 12px !important
+      table.detailed
+        tbody
+          tr
+            &:nth-child(odd)
+              background-color white
+            &:nth-child(4n+1),
+            &:nth-child(4n+2)
+              /*background-color black5*/
+  .computer.only.row
+    padding 0
+    .column
+      table
+        thead
+          tr
+            td
+              /*border-bottom 1px solid black10*/
+              vertical-align top !important
+        tbody
+          text-transform uppercase
+  .mobile.only.row
+    padding 0
+    .column
+      table
+        tbody
+          tr
+            &:nth-child(odd)
+              background-color black5
+            td
+              box-shadow none
+              &:last-child
+                padding-bottom 5px
+              div
+                width 49%
+                display inline-block
+                font-weight normal
+                color black40
+                text-transform capitalize
+                vertical-align top !important
+                &:nth-child(even)
+                  color black75 !important
+                  text-transform uppercase
+                  a
+                    div
+                      color black75 !important
+                      font-weight 700
+            .moreDetail
+              display none !important
+
+
+.btnExpandMobile
+  cursor pointer
+  text-align center !important
+  background black25 !important
+  color white
+  margin-top 10px
+  p
+    padding 5px 0
+  &:hover
+    background black40 !important
+
+.collapse
+  cursor pointer
+
+.plus.icon
+.minus.icon
+  cursor pointer
+

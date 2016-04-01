@@ -1,11 +1,15 @@
 # LittleGrid
 Little grid built using Knockout and Semantic-UI
-The grid was designed to be light, simple and easy to use with minimal code to setup.
+The grid was designed to be light, simple and easy to use with minimal code to setup and fully responsive.
 
 ### Required Libraries
 1. [Semantic-UI 2.x.x](http://www.semantic-ui.com/)
 2. [Knockout.js](http://knockoutjs.com/)
 3. [Moment.js](http://momentjs.com/) - Optional
+
+### Getting Started
+Download littleGrid.js and littleGridVanilla.min.css or littleGridVanilla.styl should you want the stylus version and include them in your project.
+Link the files on your html page and your ready to go.
 
 ## Lets get started with an example
 Setup your model which tells little grid how to render the grid.
@@ -77,6 +81,7 @@ Setting up a custom template
 </script>
 ```
 
+## Configuration
 ```
 date - JsonArray
 pager - booelan (default false) >> add a pager to the bottom of your grid
