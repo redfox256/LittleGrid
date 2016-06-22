@@ -256,7 +256,7 @@
                     <table class=\"ui littleGrid compact table\" data-bind=\"css: { detailed: $root.detail }\">\
                         <thead>\
                             <tr data-bind=\"foreach: $root.columns\">\
-                               <td data-bind=\"text: headerText, css: width\"></td>\
+                               <td data-bind=\"text: headerText, css: $parent.width\"></td>\
                             </tr>\
                         </thead>\
                         <tbody data-bind=\"foreach: $root.itemsOnCurrentPage\">\
