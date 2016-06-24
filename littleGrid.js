@@ -283,18 +283,20 @@
                                 <tr class=\"moreDetail\">\
                                     <td data-bind=\"attr: { colspan: $root.columns.length }\">\
                                         <div class=\"ui four column equal row grid\">\
-                                            <!-- ko foreach: $parent.detailColumns -->\
-                                                <!-- ko if: $root.detailNode.length > 0 -->\
-                                                    <!-- ko foreach: $parent[$root.detailNode] -->\
+                                            <!-- ko if: $root.detailNode.length > 0 -->\
+                                                <!-- ko foreach: { data: $data[$root.detailNode], as: 'detailData' } -->\
+                                                    <!-- ko foreach: { data: $root.detailColumns, as: 'detailColumn' } -->\
                                                         <div class=\"column\">\
-                                                            <label data-bind=\"text: $parent.headerText\"></label>\
+                                                            <label data-bind=\"text: detailColumn.headerText\"></label>\
                                                         </div>\
                                                         <div class=\"column\">\
-                                                            <label data-bind=\"text: typeof rowText == 'function' ? rowText($parent) : formatter($parent, $data[$parent.rowText]) \"></label>\
+                                                            <label data-bind=\"text: typeof rowText == 'function' ? rowText(detailData) : formatter($parent, detailData[detailColumn.rowText]) \"></label>\
                                                         </div>\
                                                     <!-- /ko -->\
                                                 <!-- /ko -->\
-                                                <!-- ko if: $root.detailNode.length == 0 -->\
+                                            <!-- /ko -->\
+                                            <!-- ko if: $root.detailNode.length == 0 -->\
+                                                <!-- ko foreach: $parent.detailColumns -->\
                                                     <!-- ko if: $data.hasOwnProperty('headerText') -->\
                                                         <div class=\"column\">\
                                                             <label data-bind=\"text: headerText\"></label>\
@@ -452,6 +454,10 @@ function formatter(column, value) {
     }
 
     return value;
+}
+
+function print(value) {
+    console.log(value);
 }
 
 function currencyFormatter(currencySymbol, value) {
